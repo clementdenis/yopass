@@ -21,6 +21,7 @@ deploy/app-engine/public
 deploy/aws-lambda/node_modules
 deploy/aws-lambda/main
 deploy/aws-lambda/.serverless
+deploy/aws-lambda/bin
 
 website/cypress/videos
 website/cypress/screenshots

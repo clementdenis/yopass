@@ -2,8 +2,8 @@
 set -ex 
 
 echo 'building yopass'
-GOOS=linux go build -o main
-
+GOOS=linux GOARCH=arm64 go build -ldflags -s -tags lambda.norpc -mod=readonly -o bin/function/bootstrap
+zip -j bin/function.zip bin/function/bootstrap
 npx serverless deploy
 
 echo 'Yopass backend deployed!'
